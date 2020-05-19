@@ -20,6 +20,7 @@ import android.os.Build
 import android.os.Bundle
 import android.view.View
 import android.widget.ImageView
+import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.motion.widget.MotionLayout
@@ -55,5 +56,9 @@ class DemoActivity : AppCompatActivity() {
         } else {
             motionLayout.transitionToEnd()
         }
+    }
+
+    fun showToast(v: View?) {
+        Toast.makeText(this, "Clicked!", Toast.LENGTH_SHORT).show()
     }
 }
